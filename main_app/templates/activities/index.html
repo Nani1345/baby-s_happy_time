@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/activities/activity-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Activity List</h1>
+  <img src="{% static 'images/logo.png' %}" alt="baby activity" />
+  <img src="{% static 'images/logo.png' %}" alt="baby activity" />
+  <img src="{% static 'images/logo.png' %}" alt="baby activity" />
+  <img src="{% static 'images/logo.png' %}" alt="baby activity" />
+</section>
+
+<section class="card-container">
+  {% for activity in activities %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img 
+            src="{% static 'images/logo.png' %}" 
+            alt="baby activity"
+          >
+        </div>
+        <h3 class="card-title">{{ activity.age }} year old</h3>
+        <h2 class="card-title">{{ activity.name }}</h2>
+        <p>
+          Data: {{ activity.time }} <br>
+          Location: {{ activity.location }}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
