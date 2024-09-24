@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/activities/activity-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="activity-container">
+  <div class="activity-img">
+    <img 
+      src="{% static 'images/babyoutside.png' %}" 
+      alt="Baby Together"
+    >
+  </div>
+  <div class="activity-details">
+    <h1>{{ activity.age }} years old {{ activity.name }}</h1>
+    <p>Date: {{ activity.time }}</p>
+    <p>Location: {{ activity.location }}</p>
+    <p>Description: {{ activity.description }}</p>
+  </div>
+</section>
+
+{% endblock %}
