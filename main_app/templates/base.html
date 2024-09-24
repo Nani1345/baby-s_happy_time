@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    rel="shortcut icon"
-    type="image/png"
-    href=""
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/base.css' %}"
   >
   <title>Baby's Happy Time</title>
   {% block head %}
@@ -19,7 +21,7 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="{% static "images/logo.svg" %}"
+          src="{% static "images/logo.png" %}"
           alt="The Baby Together Logo"
         >
       </a>
