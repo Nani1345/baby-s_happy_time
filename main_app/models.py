@@ -23,6 +23,7 @@ class Activity(models.Model):
   location = models.CharField(max_length=100)
   description = models.TextField(max_length=250)
   users = models.ManyToManyField(User, related_name='activities')
+  creator = models.ForeignKey(User, related_name='created_activities', on_delete=models.CASCADE)
   
   def __str__(self):
     return self.name
