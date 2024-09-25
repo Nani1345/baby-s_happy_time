@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Release Activity?</h1>
+  <img src="{% static 'images/babyoutside.png' %}" alt="baby play together"/>
+</div>
+<h2>Are you sure you want to set {{activity.name}} free?</h2>
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  <a 
+    href="{% url 'activity-detail' activity.id %}" 
+    class="btn secondary"
+  >
+    Cancel
+  </a>
+  <button type="submit" class="btn danger">Release {{activity.name}}!</button>
+</form>
+
+{% endblock %}

@@ -1,20 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Activity
 
-
-
-# class Activity:  # Note that parens are optional if not inheriting from another class
-#   def __init__(self, age, name, time, location, description):
-#     self.age = age
-#     self.name = name
-#     self.time = time
-#     self.location = location
-#     self.description = description
-
-# activities = [
-#   Activity(age='1.5-3',name='Story time', time='9/24/2024', location='downtown park', description='funny'),
-#   Activity('0-1.5', 'play time', '9/26/2024','community center', 'funny'),
-# ]
 
 # Create your views here.
 def home(request):
@@ -30,3 +17,26 @@ def activity_index(request):
 def activity_detail(request, activity_id):
   activity = Activity.objects.get(id=activity_id)
   return render(request, 'activities/detail.html', { 'activity': activity})
+
+def my_activity_index(request):
+  activities = request.user.activities.all()
+  return render(request, 'activities/my_activities_index.html', { 'activities': activities })
+
+def add_my_activities(request, activity_id):
+  activity = Activity.objects.get(id=activity_id)
+  request.user.activities.add(activity)
+  return redirect('activity-index')
+
+class ActivityCreate(CreateView):
+  model = Activity
+  # fields = ['age', 'name', 'time', 'location', 'description']
+  fields = '__all__'
+
+class ActivityUpdate(UpdateView):
+  model = Activity
+  # Let's disallow the renaming of a cat by excluding the name field!
+  fields = ['time', 'location', 'description']
+
+class ActivityDelete(DeleteView):
+  model = Activity
+  success_url = '/activities/'
