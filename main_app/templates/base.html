@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
+      <a href="{% url 'home' %}">
         <img 
           src="{% static "images/logo.png" %}"
           alt="The Baby Together Logo"
@@ -28,10 +28,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/activities">All Activities</a></li>
-        <li><a href="/about">Add Activities</a></li>
-        <li><a href="/about">My Activities</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'activity-index' %}">All Activities</a></li>
+        <li><a href="{% url 'activity-create' %}">Add Activities</a></li>
+        <li><a href="{% url 'my-activity-index' %}">My Activities</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>
