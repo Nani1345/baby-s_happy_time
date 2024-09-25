@@ -23,10 +23,12 @@
     <p>Date: {{ activity.time }}</p>
     <p>Location: {{ activity.location }}</p>
     <p>Description: {{ activity.description }}</p>
-    <div class="activity-actions">
-      <a href="{% url 'activity-update' activity.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'activity-delete' activity.id %}" class="btn danger">Delete</a>
-    </div>
+    {% if activity.creator == request.user  %}
+      <div class="activity-actions">
+        <a href="{% url 'activity-update' activity.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'activity-delete' activity.id %}" class="btn danger">Delete</a>
+      </div>
+    {% endif %}
   </div>
   
 </section>

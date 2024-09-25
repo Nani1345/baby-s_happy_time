@@ -35,10 +35,12 @@
           </p>
         </div>
       </a>
-      <form action="{% url "add-my-activities" activity.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn submit">➕</button>
-      </form>
+      {% if user.is_authenticated  %}
+        <form action="{% url "add-my-activities" activity.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn submit">➕</button>
+        </form>
+      {% endif %}
     </div>
   {% endfor %}
 </section>
