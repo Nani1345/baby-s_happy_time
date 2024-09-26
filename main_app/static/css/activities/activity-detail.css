@@ -5,10 +5,20 @@
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  border: var(--borders);
+  box-shadow: var(--card-box-shadow);
+
+}
+
+.page-header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .activity-img img {
-  width: 100%;
+  height: 100%;
   max-width: 350px;
   border-radius: 20px;
 }
@@ -74,26 +84,34 @@
   color: var(--submit);
 }
 
-.cat-details h1 {
-  font-size: var(--font-xxl);
-  margin: 15px 0 3px;
+.activity-details {
+  margin: 10px 0 0 100px;
 }
 
-.cat-details h2 {
+.activity-actions {
+  margin-top: 60px 
+}
+
+.activity-details h1 {
+  font-size: var(--font-xxl);
+  margin: 15px 0 20px;
+}
+
+.activity-details h2 {
   font-size: var(--font-xl);
   margin: 0 0 10px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.cat-details h3 {
+.activity-details h3 {
   margin: 20px 0 10px;
   font-size: var(--font-l);
 }
 
-.cat-details p {
+.activity-details p {
   font-size: var(--font-reg);
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .feedings-toy-container > section {

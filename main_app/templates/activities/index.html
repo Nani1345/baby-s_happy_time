@@ -12,7 +12,7 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>Activity List</h1>
+  <h1>Activities List</h1>
   {% comment %} <img src="{% static 'images/logo.png' %}" alt="baby activity" /> {% endcomment %}
 </section>
 
@@ -36,10 +36,12 @@
         </div>
       </a>
       {% if user.is_authenticated  %}
-        <form action="{% url "add-my-activities" activity.id %}" method="post">
-          {% csrf_token %}
-          <button type="submit" class="btn submit">➕</button>
-        </form>
+        <section class = 'add-to-mylist'>
+          <form action="{% url "add-my-activities" activity.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn submit">➕</button>
+          </form>
+        </section>
       {% endif %}
     </div>
   {% endfor %}

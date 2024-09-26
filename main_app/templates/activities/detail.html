@@ -11,6 +11,9 @@
 
 {% block content %}
 
+<div class="page-header">
+  <h1>{{ activity.age }} years old {{ activity.name }}</h1>
+</div>
 <section class="activity-container">
   <div class="activity-img">
     <img 
@@ -19,10 +22,9 @@
     >
   </div>
   <div class="activity-details">
-    <h1>{{ activity.age }} years old {{ activity.name }}</h1>
-    <p>Date: {{ activity.time }}</p>
-    <p>Location: {{ activity.location }}</p>
-    <p>Description: {{ activity.description }}</p>
+    <p><b>Date:</b> {{ activity.time }}</p>
+    <p><b>Location:</b> {{ activity.location }}</p>
+    <p><b>Description:</b> {{ activity.description }}</p>
     {% if activity.creator == request.user  %}
       <div class="activity-actions">
         <a href="{% url 'activity-update' activity.id %}" class="btn warn">Edit</a>
@@ -30,7 +32,6 @@
       </div>
     {% endif %}
   </div>
-  
 </section>
 
 {% endblock %}
