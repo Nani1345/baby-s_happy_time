@@ -1,1 +1,1 @@
-web: gunicorn baby-s_happy_time.wsgi
+WSGI_APPLICATION = 'baby-s_happy_time.wsgi.application'
