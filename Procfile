@@ -1,1 +1,1 @@
-web: gunicorn baby_happy_time.wsgi
+web: gunicorn babyhappytime.wsgi
