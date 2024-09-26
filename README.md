@@ -5,19 +5,18 @@
 ![DJANGO](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) 
-
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
 ![HEROKU](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)  
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-
 ![GITHUB](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) 
 
 # Welcome to Baby's Happy Time
 Baby's Happy Time is a platform designed to help parents and caregivers organize fun activities for babies, toddlers and children. Our goal is to create more opportunities for babies to play together, fostering social development, creativity, and happiness.
 
-# [Open Baby's Happy Time]()
 
-## Planning 
+
+# Materials Link
+## [Open Baby's Happy Time]()
 * [Trello](https://trello.com/b/qCfzd67L/my-trello-board)
 
 # Attributions
