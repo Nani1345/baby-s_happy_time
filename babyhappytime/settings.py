@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'baby_happy_time.wsgi.application'
+WSGI_APPLICATION = 'baby-happy-time.wsgi.application'
 
 
 # Database
