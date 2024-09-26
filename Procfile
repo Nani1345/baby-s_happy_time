@@ -1,1 +1,1 @@
-WSGI_APPLICATION = 'baby-s_happy_time.wsgi.application'
+WSGI_APPLICATION = 'baby_happy_time.wsgi.application'
