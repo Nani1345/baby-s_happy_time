@@ -222,6 +222,12 @@ nav li {
     margin-left: 25px;
   }
 
+  .header-logo-container img {
+    width: auto; 
+    height: 100%;
+    border-radius: 10px;
+  }
+
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {
       background: var(--nav-bg);
@@ -276,3 +282,4 @@ nav li {
     }
   }
 }
+
