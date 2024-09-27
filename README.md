@@ -16,7 +16,7 @@ Baby's Happy Time is a platform designed to help parents and caregivers organize
 
 
 # Materials Link
-* [Open Baby's Happy Time](https://baby-happy-time-50cc92d73bdd.herokuapp.com/activities/myactivities/)
+* [Open Baby's Happy Time](https://baby-happy-time-50cc92d73bdd.herokuapp.com)
 * [Trello](https://trello.com/b/qCfzd67L/my-trello-board)
 
 # Attributions
